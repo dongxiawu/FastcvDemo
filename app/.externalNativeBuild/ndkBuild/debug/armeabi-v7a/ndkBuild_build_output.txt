@@ -1,0 +1,9 @@
+rm -f /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/*
+rm -f /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdbserver
+rm -f /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdb.setup
+mkdir -p /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a
+echo [armeabi-v7a] "Gdbserver      ": "[arm-linux-androideabi] /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdbserver"
+install -p /home/dongxia/Android/Sdk/ndk-bundle/prebuilt/android-arm/gdbserver/gdbserver /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdbserver
+echo [armeabi-v7a] "Gdbsetup       ": "/media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdb.setup"
+echo "set solib-search-path /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a" > /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdb.setup
+echo "directory /home/dongxia/Android/Sdk/ndk-bundle/sysroot /home/dongxia/Android/Sdk/ndk-bundle/sources/cxx-stl/system" >> /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdb.setup

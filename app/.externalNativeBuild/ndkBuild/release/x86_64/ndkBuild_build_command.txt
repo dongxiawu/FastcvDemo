@@ -1,0 +1,16 @@
+Executable : /home/dongxia/Android/Sdk/ndk-bundle/ndk-build
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=/media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/src/main/jni/Android.mk
+APP_ABI=x86_64
+NDK_ALL_ABIS=x86_64
+NDK_DEBUG=0
+APP_PLATFORM=android-21
+NDK_OUT=/media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/release/obj
+NDK_LIBS_OUT=/media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/release/lib
+APP_SHORT_COMMANDS=false
+LOCAL_SHORT_COMMANDS=false
+-B
+-n
+jvmArgs : 
+

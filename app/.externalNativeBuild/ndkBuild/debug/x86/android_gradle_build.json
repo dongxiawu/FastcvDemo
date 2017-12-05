@@ -1,0 +1,10 @@
+{
+  "buildFiles": [
+    "/media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/src/main/jni/Android.mk"
+  ],
+  "cleanCommands": [],
+  "libraries": {},
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}

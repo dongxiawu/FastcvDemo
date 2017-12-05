@@ -1,0 +1,9 @@
+rm -f /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/x86_64/*
+rm -f /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdbserver
+rm -f /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdb.setup
+mkdir -p /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/x86_64
+echo [x86_64] "Gdbserver      ": "[x86_64-linux-android] /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdbserver"
+install -p /home/dongxia/Android/Sdk/ndk-bundle/prebuilt/android-x86_64/gdbserver/gdbserver /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdbserver
+echo [x86_64] "Gdbsetup       ": "/media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdb.setup"
+echo "set solib-search-path /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/obj/local/x86_64" > /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdb.setup
+echo "directory /home/dongxia/Android/Sdk/ndk-bundle/sysroot /home/dongxia/Android/Sdk/ndk-bundle/sources/cxx-stl/system" >> /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdb.setup

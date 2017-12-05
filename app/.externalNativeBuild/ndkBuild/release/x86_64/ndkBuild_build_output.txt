@@ -1,0 +1,3 @@
+rm -f /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/release/lib/x86_64/*
+rm -f /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/release/lib/x86_64/gdbserver
+rm -f /media/dongxia/document/AndroidStudioProjects/fastcvdemo/app/build/intermediates/ndkBuild/release/lib/x86_64/gdb.setup
