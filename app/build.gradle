@@ -1,13 +1,34 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 25
     buildToolsVersion "26.0.2"
 
     defaultConfig {
         applicationId "com.qualcomm.fastcvdemo"
-        minSdkVersion 9
-        targetSdkVersion 9
+        minSdkVersion 23
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_ARM_NEON=TRUE",
+                        "-DVAR_NAME=ARG_1 ARG_2",
+                        "-DANDROID_CPP_FEATURES=rtti exceptions"
+                cppFlags "-std=c++11", "-frtti", "-fexceptions"
+            }
+        }
+
+        ndk {
+            // Specifies the ABI configurations of your native
+            // libraries Gradle should build and package with your APK.
+//            abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a',
+//                    'arm64-v8a'
+            //只支持高通指令集
+            abiFilters 'arm64-v8a'
+        }
     }
 
     buildTypes {
@@ -17,8 +38,18 @@ android {
         }
     }
     externalNativeBuild {
-        ndkBuild {
-            path 'src/main/jni/Android.mk'
+        cmake{
+            path "CMakeLists.txt"
         }
     }
+}
+dependencies {
+    implementation 'com.android.support:support-v4:25.4.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
 }
